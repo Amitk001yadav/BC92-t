@@ -1,0 +1,32 @@
+GIT commands:
+--------------
+1. Check git version    
+    > git --version
+    
+2. To initiate a blank repository(local)
+    > git init
+
+ 
+
+3. To check the status of your repository
+    > git status
+    
+4. How to add files from working directory to git repository
+    > git add <fileName>
+            OR
+    > git add . (all new files in the working directory to Stagging area)
+
+ 
+
+5. Commit the added files (stage rea to repository)
+    > git commit -m "relavant message"
+
+ 
+
+->  git config user.email "coolshad12@gmail.com"
+->  git config user.name "Jshadab"
+
+ 
+
+6. How to check all previous commits
+    > git log OR > git log --oneline
