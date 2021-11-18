@@ -1,0 +1,71 @@
+POS 1:
+Login functionality: Here user will log in to their existing account by entering username and password.
+                     i) username must be the mail id provided while login
+		     ii) password will be only digits(other than digits are not allowed)
+		         Scenario 1: If the user try to enter only password then it will not accept asking to enter username
+			 Scenario 2: If the password is digits then it will not accept and for continuosly entering wrong password then user will be blocked
+                                     for 10 mins and if again enters wrong password then user will be locked for 24 hours.
+		     If new user then he/she must have to register first to get access to products
+		     i) mail id must be there and phone number will be there while sign up
+                     ii) mandatory fields must be filled up
+                         Scenario 1: While sign up first mail id will be provided and verify with otp, without mail id it is not possible to sign up.
+                         Scenario 2: After mail id new user have to fill up the sign up form and enter phone number and other mandatory fields.
+                     
+                     Negative scenario: sometimes new user are not getting otp to their mail to proceed further
+                     Affected module: sign up can not be done sometimes.
+                     
+                    Employee can sign in to admin portal available on the website to get details of products.
+		    i) Employee must have to enter his/her employee id and password to log in to the admin portal.
+		    ii) If password has forgotten by the employee then he has to send a request mail to IT team over the portal to get his 
+		         password reset. Temporary password will be provided by the IT team then admin need to change his/her temporary password.
+
+POS 2:
+Inserting product details: Inserting product details is only available to admin.
+			   After log in to admin portal admin can enter new product with product code and price and quantity, even the admin can
+			   update the quantity of the existing products when stocks comes.
+                           i) product code is mandatory to enter details of a produt and it is unique for every product.
+                           
+                           Negative scenario: Sometimes inserting products details is not working properly it shows data inserted but not being updated in
+                                              DB.
+                           Affected module: Due to the issue sometimes new products can not be added to cart by the customer and some proiduct shows 
+                                            out of stock tag while it is available with us.
+
+Retrieval of product: When customer add some product to his add it asks for quantity and then update query executed on the DB to update the quantity of the 
+                      product.
+                      i) When item added to card there must be insert query execute for cart DB table and the same qunatity must be update in the product 
+                         table.
+                      ii) After successful purchase of any item, order details must be updated in the same user.
+                      Negative scenario: i)After purchasing items by customer update query is not working for product table.
+                                      
+                      Affected module: Due to the issue with update query after purchasing by customer, products are purchased by other customer 
+				       which are not available with us.
+                      performance impact: customer can not get delivered their products which are actiually not available but shows availability on 
+                                          website.
+
+POS 3:
+Trasaction made by customer: After items added to cart customer has to made payment choice if he/she chooses for online payment then credit/debit card
+                             details will be asked then the page navigates to respective bank payment gateway to get otp verification and after successful'
+                             payment again page redirects to POS portal and order places successfully by generating order id and same gets notified to 
+                             customer by mail and sms.
+                             i) payment must be succeesfully completed to get the order confirmed.
+                             ii) if payment terminates abnormally then order confirmed but repayment mail forwarded to customer to do transaction again.
+			     iii) If customer doesn't make re-payment of any unsuccessful payment within 20 minutes of getting the mail then order will be
+                                 get cancelled.
+                             
+                             Negative Scenario: Even after successful payment order doesn't confirm but money deducts from customer's bank account.
+                             Affected module: Customer get successful transaction receipt but order can not be confirmed and again we have to inititate 
+                                              refund to customer or confirm order manually by entering transactio id.
+
+                            If in case customer cancel the order or return the product after deliver we have to initiate refund to the same payment 
+                            method made by customer while purchasing.
+                            i) Refund process must be successful and refund id and transaction id must be mailed to customer's registered mail id.
+                            
+                            If customer chooses upi payment it asks for different upi id linked with the account to send money request.
+                            i) after getting money request from merchant customer have to accept the request in order to confirm the order.
+                            ii) After sending request to respective upi id POS portal gives a 5 minutes of time to accept the request otherwise order will
+                                be confirmed with out payment and again re-payment mail will be forwared to respective mail id of customer.
+                            
+
+                           Negative scenario: Payment rquest can not be forwarded to respective upi id.
+                           Affected module: Screen stocks on payment page.
+                           performance impact: Customer can not make payment and order can not be confirmd.
