@@ -1,0 +1,52 @@
+Linux:
+
+ Linux is kernal distributed under open source operating system, its functionalities similar to the unix,
+ Linux follow fast approach and also used for hacking. Kernal is the heart of Linux OS.
+ It is directly connected to the h/w.
+
+Advantages: 
+         -> It is easy to learn.
+         -> Once installation , we don't need any antivirus.
+         -> Being open source, anyone can modify with code.
+         -> Its code is easy, so it is easy to learn.
+         -> Linux is more secured.
+         -> A linux based server could run non-stop without rebooting for years.
+
+-------------------------------------------------------------------------------------------------------
+ 1. Ubuntu:
+
+-> Canonical wants Ubuntu to be used as easy graphical Linux desktop without the use of command line.
+-> It is the most well known Linux Distribution.
+-> It comes with a lots of pre-installed apps and easy to use repositories libraries.
+-> It works like Mac OS and easy to use.
+--------------------------------------------------------------
+
+2. Linux Mint:
+
+-> Mint is based on Ubuntu and uses its repository software  so some packages are common in both.
+-> Earlier it was an alternative of Ubuntu because media codecs and property software are include in 
+   mint but was absent in Ubuntu.But now it has its own popularity and it uses cinnamon and mate desktop instead
+   of Ubuntu's unity desktop environment.
+-> It works like windows and should be use by new comers.
+
+---------------------------------------------------------------------------------------------------------
+3. Kali Linux:
+ 
+-> Kali Linux is used by hackers because it is free OS and has over 600 tools for penetration testing  and
+   security analyst.
+-> Kali contains several hundred tools which are geared towards various information security tasks, such as 
+   penetration testing, security research, computer forensics and reverse engineering.
+-> A mobile penetration testing platform for Android devices, based on Kali Linux. Kali NetHunter is made up of 
+   an App, App Store, Kali Container and KeX.
+---------------------------------------------------------------------------------------------------------------
+4. Red Hat Enterprise / CentOS:
+
+-> Red Hat is a commercial Linux distributer. 
+-> There products are red hat enterpris Linux (RHEL) and Fedora which are freely available.RHEL is well tested before
+-> CentOS is a  free version of RHEL and  provide  a stable platform for a long time.
+
+5. Fedora:
+
+->If you want to use red hat and latest version of software.
+-> By default it has GNOME3 desktop environment. 
+-> It is less stable but provides the latest stuff.
