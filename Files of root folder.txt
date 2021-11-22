@@ -1,0 +1,57 @@
+                              
+Root(/): Primary hierarcy root and root directory of the entire file system.
+         ->Every single file and hirectory starts from root directory. 
+
+
+Files of root folders(/):
+
+
+1. bin: ->It contains executable programs which are needed in single user mode like ls.
+
+2. sbin: -> It is for binaries with superuser(root) . 
+         -> This directory holds cmd needed to boot the system.
+
+3. etc: Host-specific system-wide configuration files.
+        ->It contains configuration files required by all programs.
+        ->It is used for start/stop individual programs.
+
+4. dev: Essential device files, like /dev/null.
+       ->These includes terminal devices, usb or any device attached to the system.
+
+5. tmp: Temporary files.
+       -> It contains temporary files created by system and user.
+       -> In this, files are deleted when system is rebooted.
+
+6. home: Home directories for all users to store their personal files.
+
+7. opt: Optional application software packages.
+       -> It contains add-on application from individuals and should be installed under 
+          either /opt/ or /pt/sub-directories.
+
+8. lib: Libraries essential for the binaries in /bin/ and /sbin/.
+
+9. mnt: Temporary mounted file system.
+       -> Temporary organize directory where system admin can organize file system.
+
+10.media: Mount points for removable media such as CD-ROMs
+        ->Temporary organize or mount directory for removable devices(like CD-ROM,floppy drives, CD writer).
+
+11. var: It contains variable data files.This includes spool directories and files and temporary files.
+        -> It also includes logging data like /var/log, /var/lock, and /var run.
+-----------------------------------------------------------------------------------------------------------------
+
+
+tty: tty command basically prints file name of terminal connected to standard input.
+
+------------------------------------------------------------------------------------------------------------------
+
+Difference b/w Linux file system and windows file system:
+
+-> In term of recovery tools, only a limited number of tools can be used on Windows, while a large number of UNIX
+   based recovery tools available for Linux file system.
+-> Windows use FAT and NTFS as file syetems, while Linux uses a variety of files.
+-> In Linux everything is a file. eg. programs, audio , video,etc.
+-> In Linux , there are two type of partion data partion and swap partion by which it never shows out of memory.
+   While in Windows it can show out of memory.
+
+
